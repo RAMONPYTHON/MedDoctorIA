@@ -9,7 +9,7 @@ APP_ROOT = os.path.dirname(os.path.abspath(__file__))
 
 
 @app.route('/')
-def index():
+def forms():
     return render_template('form.html', title="Formularios")
 
 @app.route('/exames')
@@ -17,7 +17,7 @@ def exames():
     return render_template("exames.html", title="Exames")
 
 @app.route('/home')
-def forms():
+def index():
     return render_template('index.html')
 
 @app.route('/team')
