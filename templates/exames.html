@@ -5,18 +5,59 @@
 {% endblock %}
 
 {% block content %}
-    {% block loading %}
-        <div id="loading">
-            <img src="https://media3.giphy.com/media/3oEjI6SIIHBdRxXI40/200w.gif?cid=82a1493b3990ifzslqto2rmdrie00n1p7lgfjqklriwu4e8o&rid=200w.gif&ct=g" style="width:150px;height:150px;" />
+    <div class="container">
+        <div class="blueBg">
+            {% if imagesource and label %}
+                <div class="card">
+                    <div class="card-image">
+                        <img src="../static/images/{{ imagesource }}" alt="{{ label }}">
+                    </div>
+                    {% if label == "Normal" %}
+                        <p class="name" style="color: green;">Paciente esta: {{ label }}</p>
+                        <p>
+                            Normal
+                        </p>
+                    {% elif label == "Glioma Tumor" %}
+                        <p class="name" style="color: brown;">Paciente esta com: {{ label }}, alerta!!</p>
+                        <p>
+                            Os gliomas são tumores cerebrais em que há o envolvimento das células da glia, 
+                            que são células que constituem o Sistema Nervoso Central (SNC) e são responsáveis pelo suporte os 
+                            neurônios e bom funcionamento do sistema nervoso.
+                            Esse tipo de tumor tem causa genética, porém raramente é hereditário.
+                        </p>
+                    {% elif label == "Meningioma Tumor" %}
+                        <p class="name" style="color: brown;">Paciente esta com: {{ label }}, alerta!!</p>
+                        <p>
+                            Tumor benigno que geralmente surge nas membranas que envolvem o cérebro e a medula espinhal.
+                            Os sintomas podem incluir alterações na visão, dores de cabeça, perda de audição e convulsões.
+                        </p>
+                    {% elif label == "Pituitary Tumor" %}
+                        <p class="name" style="color: brown;">Paciente esta com: {{ label }}, alerta!!</p>
+                        <p>
+                            Tumores benignos na glândula pituitária que não se espalham para fora do crânio.
+                            Os sintomas incluem alterações na visão ou dores de cabeça. Em alguns casos,os hormônios também podem ser afetados, 
+                            interferindo nos ciclos menstruais e causando disfunção sexual.
+                        </p>
+                    {% endif %}
+                </div>
+                
+            {% else %}
+                <p class="not-exame">Nenhum resultado gerado!!</p>
+            {% endif %}
         </div>
 
-        <div>
-            <form action="{{ url_for('upload') }}" method="post" enctype="multipart/form-data">
-                <input type="file" name="file" accept="image/*">
-                <input type="submit" value="resultado">
-            </form>
+        <div class="formEx">
+            <div class="form-exame">
+                <form action="{{ url_for('upload') }}" method="post" enctype="multipart/form-data">
+                    <h2 style="margin-bottom: 20px;">Resultados de Exames</h2>
+                    <p>
+                        Nesse formúlario você irá colocar o exame de ressonância magnética do paciente,
+                        para analase e gerar um resultado. O seu resultado aperecerar na tela a direita!
+                    </p>
+                    <input type="file" name="file" accept="image/*">
+                    <input type="submit" value="Resultado">
+                </form>
+            </div>
         </div>
-
-        {{ label }}
-    {% endblock %}
+    </div>
 {% endblock %}

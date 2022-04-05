@@ -4,9 +4,6 @@ from tensorflow.keras.models import load_model
 
 modelo = load_model("modelo/modelo.h5")
 status = True
-IMG_SIZE = 224
-
-ALLOWED_EXTENSIONS = {'txt', 'pdf', 'png', 'jpg', 'jpeg', 'gif'}
     
 def predict(file):
     print(" image : " + file)
@@ -27,7 +24,7 @@ def predict(file):
         output="Glioma Tumor"
     if np.argmax(prediction)==1:
         print(np.argmax(prediction))
-        output="O modelo prevê que não há tumor"
+        output="Normal"
     if np.argmax(prediction)==2:
         print(np.argmax(prediction))
         output="Meningioma Tumor"

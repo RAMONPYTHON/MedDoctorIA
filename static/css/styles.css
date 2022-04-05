@@ -38,14 +38,14 @@ nav ul{
 
 nav ul li a{
     margin: 30px;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: sans-serif;
     color: #505050;
     font-size: 15px;
     font-weight: 700;
 }
 
 .logo{
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: sans-serif;
     color: #000;
     font-size: 22px;
 }
@@ -56,14 +56,14 @@ nav ul li a{
 }
 
 .text-container p:nth-child(2){
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: sans-serif;
     font-weight: bold;
     color: #fff;
     font-size: 22px;
 }
 
 .text-container p:nth-child(1){
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: sans-serif;
     font-weight: bold;
     letter-spacing: 1px;
     color: #fff;
@@ -86,7 +86,7 @@ nav ul li a{
     width: 130px;
     height: 42px;
     border-radius: 10px;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: sans-serif;
     font-weight: bold;
     font-size: 14px;
     outline: none;
@@ -125,8 +125,8 @@ button:active{
 }
 
 .about-container img{
-    height: 250px;
-    border-radius: 10px;
+    height: 300px;
+    border-radius: 50%;
 }
 
 .about-text{
@@ -136,7 +136,7 @@ button:active{
 .about-text p:nth-child(1){
     color: #403e3e;
     font-size: 24px;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: sans-serif;
     font-weight: bold;
     line-height: 0px;
 }
@@ -145,14 +145,14 @@ button:active{
     color: #403e3e;
     font-size: 13px;
     line-height: 5px;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: sans-serif;
     font-weight: bold;
 }
 
 .bout-text p:nth-child(3),
 .bout-text p:nth-child(4){
     color: #7e7d7d;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: sans-serif;
     font-size: 16px;
 }
 
@@ -162,7 +162,7 @@ button:active{
     color: #fff;
     outline: none;
     border: none;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: sans-serif;
     background-color: #262525;
     border-radius: 10px;
 }
@@ -174,7 +174,7 @@ button:active{
 }
 
 .servicos-text p:nth-child(1){
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: sans-serif;
     font-weight: bold;
     color: #3e3d3d;
     font-size: 30px;
@@ -182,7 +182,7 @@ button:active{
 }
 
 .servicos-text p:nth-child(2){
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: sans-serif;
     font-weight: bold;
     color: #3e3d3d;
     font-size: 15px;
@@ -190,7 +190,7 @@ button:active{
 }
 
 .servicos-text p:nth-child(3){
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: sans-serif;
     color: #7e7d7d;
 }
 
@@ -211,6 +211,15 @@ button:active{
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    border-radius: 20px;
+    transition: 1s;
+    cursor: pointer;
+}
+
+.box-1:hover,
+.box-2:hover,
+.box-3:hover{
+    transform: scale(1.1);
 }
 
 .box-container{
@@ -219,15 +228,15 @@ button:active{
 }
 
 .box-1{
-    background-color: #000;
+    background-color: rgb(23, 118, 228);
 }
 
 .box-2{
-    background-color: #000;
+    background-color: rgb(23, 118, 228);
 }
 
 .box-3{
-    background-color: #000;
+    background-color: rgb(23, 118, 228);
 }
 
 .box-1 span,
@@ -240,7 +249,7 @@ button:active{
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: sans-serif;
     font-weight: bold;
 }
 
@@ -248,7 +257,7 @@ button:active{
 .box-2 p:nth-child(2),
 .box-3 p:nth-child(2){
     color: #fff;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: sans-serif;
     font-size: 23px;
     line-height: 0px;
 }
@@ -256,10 +265,10 @@ button:active{
 .box-1 p:nth-child(3),
 .box-2 p:nth-child(3),
 .box-3 p:nth-child(3){
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: sans-serif;
     text-align: center;
     width: 230px;
-    color: #8f8f8f;
+    color: #fff;
 }
 
 .box-1 button,
@@ -276,7 +285,9 @@ button:active{
 .ia{
     width: 100%;
     height: 280px;
-    background-color: #000;
+    background-image: url('https://static.vecteezy.com/ti/vetor-gratis/p1/544006-fundo-digital-futurista-do-azul-da-tecnologia-do-sumario-da-transformacao-inteligencia-artificial-e-conceito-de-big-data-computador-do-crescimento-do-negocio-e-tema-da-seguranca-do-hacker-cyber-ilustracaoial-vetor.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -309,7 +320,7 @@ footer{
 }
 
 footer p{
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: sans-serif;
 }
 
 footer p:nth-child(1){
@@ -348,7 +359,7 @@ footer p:nth-child(2){
 }
 
 .team-text p:nth-child(1){
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: sans-serif;
     font-weight: bold;
     color: #3e3d3d;
     font-size: 30px;
@@ -356,7 +367,7 @@ footer p:nth-child(2){
 }
 
 .team-text p:nth-child(2){
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: sans-serif;
     font-weight: bold;
     color: #3e3d3d;
     font-size: 15px;
@@ -364,7 +375,7 @@ footer p:nth-child(2){
 }
 
 .team-text p:nth-child(3){
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: sans-serif;
     color: #7e7d7d;
 }
 
@@ -414,7 +425,7 @@ footer p:nth-child(2){
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: sans-serif;
     font-weight: bold;
 }
 
@@ -422,7 +433,7 @@ footer p:nth-child(2){
 .card-2 p:nth-child(2),
 .card-3 p:nth-child(2){
     color: #000;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: sans-serif;
     font-size: 23px;
     line-height: 0px;
 }
@@ -430,7 +441,7 @@ footer p:nth-child(2){
 .card-1 p:nth-child(3),
 .card-2 p:nth-child(3),
 .card-3 p:nth-child(3){
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: sans-serif;
     text-align: center;
     width: 230px;
     color: #8f8f8f;
