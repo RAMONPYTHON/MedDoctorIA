@@ -1,18 +1,20 @@
 import os
-from flask import Flask, render_template, request, url_for, redirect
-from pred import check
+from flask import Flask, render_template, request
+from werkzeug.utils import secure_filename
+from pred import *
 
 app = Flask(__name__, static_folder="static")
 
 APP_ROOT = os.path.dirname(os.path.abspath(__file__))
 
+
 @app.route('/')
 def index():
-    return render_template('form.html')
+    return render_template('form.html', title="Formularios")
 
 @app.route('/exames')
 def exames():
-    return "exames"
+    return render_template("exames.html", title="Exames")
 
 @app.route('/home')
 def forms():
@@ -20,7 +22,7 @@ def forms():
 
 @app.route('/team')
 def team():
-    return render_template('team.html')
+    return render_template('team.html', title="Equipe")
 
 @app.route('/upload', methods=['GET', 'POST'])
 def upload():
@@ -37,10 +39,9 @@ def upload():
         dest = '/'.join([target, filename])
         print(dest)
         file.save(dest)
+        output = predict(filename)
+        return render_template("exames.html", label=output, imagesource=filename)
 
-    status = check(filename)
-
-    return render_template('resultado.html', image_name=filename, pred=status)
 
 if __name__ == "main":
     app.run(debug=True)

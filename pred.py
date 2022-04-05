@@ -2,27 +2,36 @@ import numpy as np
 from tensorflow.keras.preprocessing import image
 from tensorflow.keras.models import load_model
 
-saved_model = load_model("modelo/modeloTreinado.h5")
+modelo = load_model("modelo/modelo.h5")
 status = True
+IMG_SIZE = 224
 
-def check(input_img):
-    print(" image : " + input_img)
-    print(input_img)
+ALLOWED_EXTENSIONS = {'txt', 'pdf', 'png', 'jpg', 'jpeg', 'gif'}
+    
+def predict(file):
+    print(" image : " + file)
+    print(file)
 
-    img = image.load_img("static/images/" + input_img, target_size=(224, 224))
-    img = np.asarray(img)
-    print("Imagem: " + img)
+    img = image.load_img("static/images/" + file, target_size=(150, 150))
+    rgbimg = np.array(img,dtype=np.float64)
+    rgbimg = rgbimg.reshape((1,150, 150,3))
 
     img = np.expand_dims(img, axis=0)
 
     print(img)
-    output = saved_model.predict(img)
+    prediction = modelo.predict(img)
+    
 
-    print(output)
-    if output[0][0] == 1:
-        status = True
-    else:
-        status = False
-
-    print("Resultado do Modelo: " + status)
-    return status
+    if np.argmax(prediction)==0: 
+        print(np.argmax(prediction))   
+        output="Glioma Tumor"
+    if np.argmax(prediction)==1:
+        print(np.argmax(prediction))
+        output="O modelo prevê que não há tumor"
+    if np.argmax(prediction)==2:
+        print(np.argmax(prediction))
+        output="Meningioma Tumor"
+    if np.argmax(prediction)==3:
+        print(np.argmax(prediction))
+        output="Pituitary Tumor"
+    return output

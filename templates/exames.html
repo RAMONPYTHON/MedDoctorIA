@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block head %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/exames.css') }}">
+{% endblock %}
+
+{% block content %}
+    {% block loading %}
+        <div id="loading">
+            <img src="https://media3.giphy.com/media/3oEjI6SIIHBdRxXI40/200w.gif?cid=82a1493b3990ifzslqto2rmdrie00n1p7lgfjqklriwu4e8o&rid=200w.gif&ct=g" style="width:150px;height:150px;" />
+        </div>
+
+        <div>
+            <form action="{{ url_for('upload') }}" method="post" enctype="multipart/form-data">
+                <input type="file" name="file" accept="image/*">
+                <input type="submit" value="resultado">
+            </form>
+        </div>
+
+        {{ label }}
+    {% endblock %}
+{% endblock %}

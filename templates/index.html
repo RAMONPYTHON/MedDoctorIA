@@ -1,13 +1,11 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+{% extends "base.html" %}
+
+{% block head %}
     <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
-    <title>MedDoctoIA</title>
-</head>
-<body>
+{% endblock %}
+
+{% block content %}
+    
     <section>
         <nav>
             <a href="" class="logo">MedDoctorIA</a>
@@ -16,29 +14,30 @@
                 <li><a href="/" class="active">Home</a></li>
                 <li><a href="#about">Sobre</a></li>
                 <li><a href="#servicos">Serviços</a></li>
+                <li><a href="/exames">Exames</a></li>
                 <li><a href="/team">Equipe</a></li>
             </ul>
         </nav>
 
         <div class="text-container">
             <p>Detector de Tumor Cerebral</p>
-            <p>Plataforma precisa para diagnostico</p>
+            <p>Plataforma precisa para diagnostico de tumores e câncer</p>
             <button class="hire-btn">Conhecer</button>
         </div>
 
-        <img src="https://miro.medium.com/max/1200/1*f1sodi17fNcObGBmIKgGGQ.gif" class="tumor">
     </section>
 
     <div class="about-container" id="about">
-        <img src="https://ichef.bbci.co.uk/news/640/cpsprodpb/AB31/production/_90152834_thinkstockphotos-155317034.jpg" alt="">
+        <img src=""
+            alt="">
         <div class="about-text">
             <p>Sobre a MedDoctorIA</p>
             <p>Empresa especializada em desenvovimento e inteligencia artificial</p>
             <p>
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry.
                 Lorem Ipsum has been the industry's standard dummy text ever since
-                the 1500s, when an unknown printer took a galley of type and 
-                scrambled it to make a type specimen book. It has survived not only 
+                the 1500s, when an unknown printer took a galley of type and
+                scrambled it to make a type specimen book. It has survived not only
                 five centuries, but also the leap into electronic typesetting,
                 remaining essentially unchanged.
             </p>
@@ -50,10 +49,10 @@
             <p>Serviços</p>
             <p>Saúde</p>
             <p>
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry.
                 Lorem Ipsum has been the industry's standard dummy text ever since
-                the 1500s, when an unknown printer took a galley of type and 
-                scrambled it to make a type specimen book. It has survived not only 
+                the 1500s, when an unknown printer took a galley of type and
+                scrambled it to make a type specimen book. It has survived not only
                 five centuries, but also the leap into electronic typesetting,
                 remaining essentially unchanged.
             </p>
@@ -64,8 +63,8 @@
                 <span>1</span>
                 <p class="heading">Diagnostico</p>
                 <p>
-                    when an unknown printer took a galley of type and 
-                    scrambled it to make a type specimen book. It has survived not only 
+                    when an unknown printer took a galley of type and
+                    scrambled it to make a type specimen book. It has survived not only
                     five centuries, but also the leap into electronic typesetting,
                     remaining essentially unchanged.
                 </p>
@@ -75,8 +74,8 @@
                 <span>2</span>
                 <p class="heading">Diagnostico</p>
                 <p>
-                    when an unknown printer took a galley of type and 
-                    scrambled it to make a type specimen book. It has survived not only 
+                    when an unknown printer took a galley of type and
+                    scrambled it to make a type specimen book. It has survived not only
                     five centuries, but also the leap into electronic typesetting,
                     remaining essentially unchanged.
                 </p>
@@ -86,8 +85,8 @@
                 <span>3</span>
                 <p class="heading">Diagnostico</p>
                 <p>
-                    when an unknown printer took a galley of type and 
-                    scrambled it to make a type specimen book. It has survived not only 
+                    when an unknown printer took a galley of type and
+                    scrambled it to make a type specimen book. It has survived not only
                     five centuries, but also the leap into electronic typesetting,
                     remaining essentially unchanged.
                 </p>
@@ -104,8 +103,8 @@
     <footer>
         <p>Empresa MedDoctorIA</p>
         <p>
-            when an unknown printer took a galley of type and 
-            scrambled it to make a type specimen book. It has survived not only 
+            when an unknown printer took a galley of type and
+            scrambled it to make a type specimen book. It has survived not only
             five centuries, but also the leap into electronic typesetting,
             remaining essentially unchanged.
         </p>
@@ -116,7 +115,4 @@
             <a href="#"><i class="far fa-user" style="color: #000;"></i></a>
         </div>
     </footer>
-
-    <script src="https://kit.fontawesome.com/51ba2077d4.js" crossorigin="anonymous"></script>
-</body>
-</html>
+{% endblock %}

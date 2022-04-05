@@ -1,16 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends "base.html" %}
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/forms.css') }}">
-    <title>MedDoctorIA - Formúlarios</title>
-</head>
+{% block head %}
+    <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='css/forms.css') }}">
+{% endblock %}
 
-<body>
-    <div class="container">
+{% block content %}
+    {% block loading %}
+        <div id="loading">
+            <img src="https://media3.giphy.com/media/3oEjI6SIIHBdRxXI40/200w.gif?cid=82a1493b3990ifzslqto2rmdrie00n1p7lgfjqklriwu4e8o&rid=200w.gif&ct=g" style="width:150px;height:150px;" />
+        </div>
+    {% endblock %}
+    <div class="container" id="conteudo" style="display: none">
         <input type="checkbox" id="flip">
         <div class="cover">
             <div class="front">
@@ -75,8 +75,4 @@
             </div>
         </div>
     </div>
-
-    <script src="https://kit.fontawesome.com/51ba2077d4.js" crossorigin="anonymous"></script>
-</body>
-
-</html>
+{% endblock %}
