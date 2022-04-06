@@ -1,12 +1,10 @@
 import os
 from flask import Flask, render_template, request
-from werkzeug.utils import secure_filename
 from pred import *
 
 app = Flask(__name__, static_folder="static")
 
 APP_ROOT = os.path.dirname(os.path.abspath(__file__))
-
 
 @app.route('/')
 def forms():
