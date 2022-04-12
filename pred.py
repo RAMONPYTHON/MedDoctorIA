@@ -6,7 +6,7 @@ modelo = load_model("modelo/modelo.h5")
 status = True
     
 def predict(file):
-    print(" image : " + file)
+    print(" imagem : " + file)
     print(file)
 
     img = image.load_img("static/images/" + file, target_size=(150, 150))
