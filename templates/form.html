@@ -29,7 +29,7 @@
                 <div class="login-form">
                     <h2>MedDoctorIA</h2>
                     <div class="title">Login</div>
-                    <form action="" method="POST">
+                    <form action="{{ url_for('login') }}" method="POST">
                         <div class="input-boxes">
                             <div class="input-box">
                                 <i class="fas fa-envelope"></i>
@@ -50,7 +50,7 @@
                 <div class="signup-form">
                     <h2>MedDoctorIA</h2>
                     <div class="title">Cadastra-se</div>
-                    <form action="" method="POST">
+                    <form action="{{ url_for('cadastro') }}" method="POST">
                         <div class="input-boxes">
                             <div class="input-box">
                                 <i class="fas fa-user"></i>

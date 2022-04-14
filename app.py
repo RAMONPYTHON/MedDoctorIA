@@ -10,6 +10,24 @@ APP_ROOT = os.path.dirname(os.path.abspath(__file__))
 def forms():
     return render_template('form.html', title="Formularios")
 
+@app.route('/cadastro', methods=['GET', 'POST'])
+def cadastro():
+    if request.method == "POST":
+        username = request.form.get("username")
+        email = request.form.get("email")
+        senha = request.form.get("password")
+
+        return f"Nome: {username}\n Emial: {email} \n Senha: {senha}"
+    else:
+        return render_template("form.html", title="Formularios")
+
+@app.route('/login', methods=["GET", "POST"])
+def login():
+    if request.method == "POST":
+        email = request.form.get("email")
+        senha = request.form.get("password")
+
+        return f"Emial: {email} \n Senha: {senha}"
 @app.route('/exames')
 def exames():
     return render_template("exames.html", title="Exames")
